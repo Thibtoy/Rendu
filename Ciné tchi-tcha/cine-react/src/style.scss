@@ -1,0 +1,38 @@
+$headerColor: rgb(214, 174, 12)/*rgb(254, 204, 0)rgb(132, 20, 1)*/;
+$carrouselColor: rgb(102, 90, 88);
+$mainFontColor: white;
+
+@mixin flxRowCtr() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	background-color: black;
+}
+
+#body {
+	display: grid;
+	grid-template-rows: 90px calc(0.7*(100vh)) 100vh 100vh 70px;
+}
+
+#Header, #Footer {
+	background-color: $headerColor;
+	@include flxRowCtr();
+}
+
+#Carrousel, #FindFilm {
+	background-image: linear-gradient(to bottom, black, $carrouselColor, black);
+	/*background-image: radial-gradient(ellipse at center, $carrouselColor, black);*/
+}
+
+.MasterFF {
+	font-family: aria;
+	color: $mainFontColor;
+	@include flxRowCtr();
+}

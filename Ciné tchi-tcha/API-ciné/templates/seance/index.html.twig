@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Séance index{% endblock %}
+
+{% block body %}
+   <div class="AdminBox">
+    <h1>Séance index</h1>
+
+    <table class="table">
+        <thead>
+            <tr class="MasterFF">
+                <th>Id</th>
+                <th>Date</th>
+                <th>PlacesDisponibles</th>
+                <th>Film</th>
+                <th>Réservations en Cours</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for s_ance in s_ances %}
+            <tr>
+                <td>{{ s_ance.id }}</td>
+                <td>{{ s_ance.Date ? s_ance.Date|date('Y-m-d') : '' }}</td>
+                <td>{{ s_ance.PlacesDisponibles - s_ance.Reservations|length }}</td>
+                <td>{{ s_ance.Film.Titre }}</td>
+                <td>{{ s_ance.Reservations|length }}</td>
+                <td>
+                    <a href="{{ path('seance_show', {'id': s_ance.id}) }}">show</a>
+                    <a href="{{ path('seance_edit', {'id': s_ance.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('seance_new') }}">Create new</a>
+</div>
+{% endblock %}

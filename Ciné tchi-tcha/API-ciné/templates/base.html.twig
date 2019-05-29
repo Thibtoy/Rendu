@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}">
+    </head>
+    <body>
+    	<div id="Header" class="flx-row">
+    		<h1 class="MasterFF">Ciném'Admin</h1>
+    	</div>
+    	<nav id="Nav">
+    		<ul class="flx-row">
+				<li class="AsideItem">
+					<a href="{{path('seance_index')}}"> <h3 class="MasterFF">Séances</h3></a>
+				</li>
+				<li class="AsideItem">
+					<a href="{{path('newsletter')}}"><h3 class="MasterFF">Newsletters</h3></a>
+				</li>
+				<li class="AsideItem">
+					<a href="{{path('film_index')}}"><h3 class="MasterFF">Films</h3></a>
+				</li>
+				<li class="AsideItem">
+					<a href="{{path('salle_index')}}"><h3 class="MasterFF">Salles</h3></a>
+				</li>
+				<li class="AsideItem">
+					<h3 class="MasterFF">Statistiques</h3>
+				</li>
+    		</ul>
+    	</nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

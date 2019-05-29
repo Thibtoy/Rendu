@@ -1,0 +1,42 @@
+Base de données:
+	Une base de données est une entité dans laquelle il est possible de stocker des données de façon structurée et avec le moins de redondance possible. Ces données doivent pouvoir être utilisées par des programmes, par des utilisateurs différents. Ainsi, la notion de base de données est généralement couplée à celle de réseau, afin de pouvoir mettre en commun ces informations, d'où le nom de base. On parle généralement de système d'information pour désigner toute la structure regroupant les moyens mis en place pour pouvoir partager des données. 
+
+
+SGBDR:
+	Un SGBDR (système de gestion de base de données relationnelle) est tout simplement un SGBD, qui en plus gère les relations, c'est-à-dire qu'on peut définir des contraintes qui garantissent l'intégrité référentielle et fonctionnelle des données.
+
+
+Une table:
+	Une table est un ensemble de données organisées sous forme d'un tableau où les colonnes correspondent à des catégories d'information (une colonne peut stocker des numéros de téléphone, une autre des noms...) et les lignes à des enregistrements, également appelés entrées.
+	Chaque table est l'implémentation physique d'une relation entre les différentes colonnes. Chaque correspondance est définie par une ligne de la table.
+
+
+Une colonne:
+	Une colonne représente une catégorie d'informations(Nom ou Adresse par exemple), chaque ligne à l'intérieur de cette colonne correspond à une nouvelle entrée. Généralement, on regroupe les colonnes en relation (un Nom et un Prénom par exemple) à l'intérieur d'une table (Personnes par exemple).
+
+
+Une ligne / un enregistrement:
+	Une ligne ou un enregistrement correspond à une information distincte, enregistrée dans une table, ainsi pour reprendre l'exemple de la table `Personnes`, Jean Jeannot est une ligne ou enregistrement dans la table et Jacqueline Jackette en est une autre ligne ou enregistrement de la table, les deux informations sont distinctes mais enregistrées dans une même table.
+
+
+Une clé primaire:
+	Une clé primaire est la donnée qui permet d'identifier de manière unique un enregistrement dans une table. Une clé primaire peut être composée d'une ou de plusieurs colonnes de la table. Deux lignes distinctes de la table ne peuvent pas avoir les mêmes valeurs dans les colonnes définies comme clé primaire.
+
+
+Une clé étrangère:
+	Une clé étrangère identifie une colonne ou un ensemble de colonnes d'une table comme référençant une colonne ou un ensemble de colonnes d'une autre table.
+
+
+Une contrainte:
+	Dans une base de données, une contrainte d'intégrité permet de garantir la cohérence des données lors des mises à jour de la base. En effet, les données d'une base ne sont pas indépendantes, mais obéissant à des règles sémantiques, après chaque mise à jour, le SGBD contrôle qu'aucune contrainte d'intégrité n'est violée.
+
+
+Un index:
+	Un index est une structure de données utilisée et entretenue par le système de gestion de base de données (SGBD) pour lui permettre de retrouver rapidement les données. L'utilisation d'un index simplifie et accélère les opérations de recherche, de tri ou de jointure. L'index d'une donnée est unique (dans sa table).
+
+
+CRUD: Create, Read, Update, Delete. Fais de mettre en place un système permettant à un utilisateur d'accéder aux données, de créer de nouveaux enregistrements, de modifier les enregistrements existants ou de les supprimer.
+
+
+Une jointure:
+	La jointure est l'opération permettant d'associer plusieurs tables ou vues de la base par le biais d'un lien logique de données entre les différentes tables ou vues, ce lien logique seras généralement l'id d'un enregistrement.

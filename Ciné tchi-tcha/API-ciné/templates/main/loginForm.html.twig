@@ -1,0 +1,4 @@
+{{ form_start(form, {'attr': {'method': 'POST', 'action': 'localhost:8000/admin/login'}}) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Send') }}</button>
+{{ form_end(form) }}
